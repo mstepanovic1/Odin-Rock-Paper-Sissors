@@ -30,8 +30,8 @@ function getComputerChoice() {
 
 
 function getHumanChoice() { //function promts for player choice and returns it
-    let humanChoice = prompt("Please Enter Choice").toLowerCase();
-    return humanChoice;
+    let humanChoice = document.querySelector(".btn");            //prompt("Please Enter Choice").toLowerCase();
+    humanChoice.addEventListener("click", () => humanChoice);
 }
 
 //console.log ("Human Choice: " + getHumanChoice());
@@ -63,17 +63,17 @@ const compSelection = getComputerChoice();
 console.log("Computer Score: " + compScore);
 console.log("Player Score: " + humanScore); */
 
-function playGame() {
-    for (let i = 0; i < 5; i++) {
+//function playGame() {
+   // for (let i = 0; i < 5; i++) {
         const humanSelection = getHumanChoice();
         const compSelection = getComputerChoice();  
         console.log(playRound(humanSelection, compSelection));
         console.log("Player Choice: " + humanSelection + " vs " + "Computer Choice: " + compSelection);
         console.log("Computer Score: " + compScore);
         console.log("Player Score: " + humanScore);
-    }
+   // }
 
-}
+//}
 
 console.log(playGame());
 
