@@ -30,9 +30,17 @@ function getComputerChoice() {
 
 
 function getHumanChoice() { //function promts for player choice and returns it
-    let humanChoice = document.querySelector(".btn");            //prompt("Please Enter Choice").toLowerCase();
-    humanChoice.addEventListener("click", () => humanChoice);
-}
+    let humanChoice = document.querySelector('.btn');            //prompt("Please Enter Choice").toLowerCase();
+    //humanChoice.addEventListener("click", () => humanChoice);
+} 
+
+const btns = document.querySelectorAll("button");
+const result = document.getElementById("result");
+btns.forEach((button) => {
+    button.addEventListener("click", () => {
+        result.innerText = "Your Choice: " + button.innerText;
+    })
+})
 
 //console.log ("Human Choice: " + getHumanChoice());
 
@@ -65,17 +73,17 @@ console.log("Player Score: " + humanScore); */
 
 //function playGame() {
    // for (let i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice();
-        const compSelection = getComputerChoice();  
-        console.log(playRound(humanSelection, compSelection));
+       // const humanSelection = getHumanChoice();
+        //const compSelection = getComputerChoice();  
+        /*console.log(playRound(humanSelection, compSelection));
         console.log("Player Choice: " + humanSelection + " vs " + "Computer Choice: " + compSelection);
         console.log("Computer Score: " + compScore);
-        console.log("Player Score: " + humanScore);
+        console.log("Player Score: " + humanScore);*/
    // }
 
 //}
 
-console.log(playGame());
+//console.log(playGame());
 
 console.log("Final Scores:");
 console.log("Computer Score: " + compScore);
